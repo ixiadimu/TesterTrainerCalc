@@ -1,9 +1,11 @@
-= 電卓アプリ
-
-:toc:
+// 左側に目次を作る
+:toc: left
+// 見出しのナンバリング
 :sectnums:
-:toclevels: 5
+// 画像ファイル置き場の指定
 :imagesdir: assets/images
+
+= 電卓アプリ
 
 == 概要
 
