@@ -1,6 +1,6 @@
+.vs/
 Calc/bin/
 Calc/InfrastructureAssemblies/
 Calc/obj/
 *.suo
-.vs/Calc/v16/Server/sqlite3/
 packages/
