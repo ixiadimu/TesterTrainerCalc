@@ -12,26 +12,59 @@ namespace Calc.Models
 	[XmlRoot("FIAF1")]
 	public class BugConfig
 	{
+		/// <summary>
+		/// true: タイトルの誤字が発生
+		/// </summary>
 		[XmlElement("Mercedes")]
 		public bool InvalidTitle = false;
+		/// <summary>
+		/// true: リサイズ可の不具合が発生 
+		/// </summary>
 		[XmlElement("Ferrari")]
 		public bool CanResize = false;
+		/// <summary>
+		/// true: アプリが終了しない不具合が発生
+		/// </summary>
 		[XmlElement("RedBull")]
 		public bool NotClose = false;
+		/// <summary>
+		/// true: タブオーダーが不正になる
+		/// </summary>
 		[XmlElement("ForceIndia")]
 		public bool InvalidTabOrder = false;
+		/// <summary>
+		/// true: クリアボタンにタブがストップしない
+		/// </summary>
 		[XmlElement("Williams")]
 		public bool NotClearButtonTabStop = false;
+		/// <summary>
+		/// true: 初期表示がおかしい
+		/// </summary>
 		[XmlElement("Renault")]
 		public bool InvalidInitVal = false;
+		/// <summary>
+		/// true: 0 ボタンが反応しなくなる
+		/// </summary>
 		[XmlElement("ToroRossoHonda")]
 		public bool NotZeroButtonClick = false;
+		/// <summary>
+		/// true: 「-」と「÷」が逆転する
+		/// </summary>
 		[XmlElement("Haas")]
 		public bool InvalidSymbol = false;
+		/// <summary>
+		/// true: オーバーフローの桁数が仕様と異なる
+		/// </summary>
 		[XmlElement("McLaren")]
 		public bool OverFlow = false;
+		/// <summary>
+		/// true: ボタンを押す度 CPU 負荷を高くする
+		/// </summary>
 		[XmlElement("Sauber")]
 		public bool InvalidCPUUse = false;
+		/// <summary>
+		/// true: イコールボタンを押した際のラグが発生
+		/// </summary>
 		[XmlElement("Raikkonen")]
 		public bool WaitEqualButton = false;
 
