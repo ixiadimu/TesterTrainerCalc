@@ -44,10 +44,17 @@
 |Calc.exe.config
 |ランタイムの情報などが記載されたファイル
 
-|Livet.dll +
-Livet.xml +
+|System.Windows.Interactivity.dll +
+Livet.Behaviors.dll +
+Livet.Collections.dll +
+Livet.Converters.dll +
+Livet.Core.dll +
+Livet.dll +
+Livet.EventListeners.dll +
+Livet.Messaging.dll +
+Livet.Mvvm.dll +
 Microsoft.Expression.Interactions.dll +
-System.Windows.Interactivity.dll
+Microsoft.Xaml.Behaviors.dll
 |モジュールで利用しているライブラリとその設定など
 
 |System.dat
