@@ -31,7 +31,7 @@ namespace Calc.ViewModels
 		/// </summary>
 		private enum EnumOperate
 		{
-			None, Addition, Subtraction, Multiplication, Division, Calclation, Clear
+                    None, Addition, Subtraction, Multiplication, Division, Calculation, Clear
 		}
 
 		/// <summary>
@@ -283,7 +283,7 @@ namespace Calc.ViewModels
 					mode = EnumInputMode.Symbol;
 				}
 			} else if (kind == EnumButtonKind.Func) {
-				if (operate == EnumOperate.Calclation) {
+                                if (operate == EnumOperate.Calculation) {
 					if (prevMode == EnumInputMode.First) {
 						return;
 					}
@@ -330,7 +330,8 @@ namespace Calc.ViewModels
 				}
 				if (rightString.Length == 0) return;
 
-				Display = Calclate(long.Parse(leftString), long.Parse(rightString), operationSymbol);
+                                // 計算を行い結果を表示
+                                Display = Calculate(long.Parse(leftString), long.Parse(rightString), operationSymbol);
 				if (mode == EnumInputMode.Error) {
 					return;
 				}
@@ -418,7 +419,7 @@ namespace Calc.ViewModels
 				kind = EnumButtonKind.Mark;
 				break;
 			case "＝":
-				operate = EnumOperate.Calclation;
+                                operate = EnumOperate.Calculation;
 				kind = EnumButtonKind.Func;
 				// ランダムで遅らせる
 				// TODO: コマンドを分ければ？DelayExecute とか？
@@ -446,13 +447,13 @@ namespace Calc.ViewModels
                 }
 
 		/// <summary>
-		/// 計算する
+                /// 2つの値と演算子から結果を計算する
 		/// </summary>
 		/// <param name="first">左側の値</param>
 		/// <param name="second">右側の値</param>
 		/// <param name="ope">操作（演算子）</param>
-		/// <returns></returns>
-		private string Calclate(long first, long second, EnumOperate ope)
+                /// <returns></returns>
+                private string Calculate(long first, long second, EnumOperate ope)
 		{
 			long result = 0;
 			switch (ope) {
