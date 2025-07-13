@@ -439,11 +439,12 @@ namespace Calc.ViewModels
 		/// </summary>
 		/// <param name="from">最低遅延秒</param>
 		/// <param name="to">最高遅延秒</param>
-		private void DelayRandom(uint from, uint to)
-		{
-			Random rand = new Random((int)DateTime.Now.Ticks);
-			System.Threading.Thread.Sleep(rand.Next(0, 700));
-		}
+                private void DelayRandom(uint from, uint to)
+                {
+                        Random rand = new Random((int)DateTime.Now.Ticks);
+                        // Use the supplied range for the delay instead of a fixed one
+                        System.Threading.Thread.Sleep(rand.Next((int)from, (int)to));
+                }
 
 		/// <summary>
 		/// 計算する
