@@ -442,7 +442,6 @@ namespace Calc.ViewModels
                 private void DelayRandom(uint from, uint to)
                 {
                         Random rand = new Random((int)DateTime.Now.Ticks);
-                        // Use the supplied range for the delay instead of a fixed one
                         System.Threading.Thread.Sleep(rand.Next((int)from, (int)to));
                 }
 
